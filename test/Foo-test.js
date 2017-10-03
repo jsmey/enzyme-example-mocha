@@ -1,7 +1,10 @@
 import React from 'react';
 import { expect } from 'chai';
-import { shallow, mount, render } from 'enzyme';
+import Enzyme, { shallow, mount, render } from 'enzyme';
 import Foo from '../src/Foo';
+import Adapter from 'enzyme-adapter-react-16';
+
+Enzyme.configure({ adapter: new Adapter() });
 
 describe("A suite", function() {
   it("contains spec with an expectation", function() {
